@@ -62,6 +62,9 @@ class _KeyManager:
         if key == keyboard.Key.caps_lock.__str__():
             return ""
 
+        if key == keyboard.Key.enter.__str__():
+            return "\n"
+
         return key
 
     def is_special_key(self, key):
