@@ -64,14 +64,17 @@ class FileManager:
         :param mode:
         :return:
         """
-        if not self._is_file_exists():
-            self._write_as_outline(key)
+        try:
+            if not self._is_file_exists():
+                self._write_as_outline(key)
 
-        if mode is None:
-            mode = self._mode
+            if mode is None:
+                mode = self._mode
 
-        if mode == FileManagerWriteMode.INLINE:
-            self._write_as_inline(key)
+            if mode == FileManagerWriteMode.INLINE:
+                self._write_as_inline(key)
 
-        if mode == FileManagerWriteMode.OUTLINE:
-            self._write_as_outline(key)
+            if mode == FileManagerWriteMode.OUTLINE:
+                self._write_as_outline(key)
+        except BaseException:
+            raise FileManagerException("An unexpected error has occurred when trying to write in file")
