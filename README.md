@@ -1,4 +1,4 @@
-# John the keylogger
+# Keylogger
 Python script that monitors keyboard inputs for writes it in a file
 
 ## Installation
@@ -11,3 +11,4 @@ Python script that monitors keyboard inputs for writes it in a file
 - Was developed and tested in a Linux environment
 - Was developed and tested with python 3.8.1
 - Without the "--file" argument, a file will be created in the project folder
+- It is intended to use only for educational purpose
